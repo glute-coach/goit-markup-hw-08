@@ -1,0 +1,43 @@
+.customer {
+  margin-bottom: 50px;
+}
+
+.customer-list {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  & .icon {
+    fill: #afb1b8;
+  }
+
+  & .customer-item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.customer-item {
+  @include centeredFlex();
+
+  width: 170px;
+  height: 90px;
+  color: inherit;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  &:hover .icon {
+    fill: $accent-color;
+    transition: 250ms $timing-function;
+  }
+
+  &:hover {
+    border: 1px solid $accent-color;
+    transition: 250ms $timing-function;
+  }
+}
+
+.customer-link {
+  height: 40px;
+  display: block;
+}
