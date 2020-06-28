@@ -274,10 +274,6 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-ul {
-  list-style: none;
-}
-
 img {
   display: block;
   /* width: 100%;
@@ -305,9 +301,14 @@ textarea {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
 
 .visually-hidden {
@@ -321,13 +322,70 @@ textarea {
   overflow: hidden;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .page-header {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 60px;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  min-height: 483px;
+  background-color: teal;
+  text-align: center;
+}
+
+.navigation-menu.is-open {
+  display: block;
+}
+
+.menu-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
 }
 
 .main-nav {
@@ -341,9 +399,6 @@ textarea {
 
 .item .nav-link {
   position: relative;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  display: block;
   height: 80px;
   color: #212121;
   font-weight: 500;
@@ -369,9 +424,6 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 80px;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .site-nav .nav-link:hover,
@@ -385,10 +437,6 @@ textarea {
   color: #2196f3;
 }
 
-.site-nav .item:not(:last-child) {
-  margin-right: 50px;
-}
-
 .contacts-link {
   color: #757575;
   font-weight: 500;
@@ -400,7 +448,6 @@ textarea {
 
 .contacts-link .icon {
   fill: #757575;
-  margin-right: 10px;
 }
 
 .contacts-link:hover .icon {
@@ -923,6 +970,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 20px;
 }
 
 .socials-container {

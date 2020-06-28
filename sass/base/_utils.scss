@@ -16,7 +16,7 @@ body {
 }
 
 ul {
-  list-style: none;
+  @extend %list;
 }
 
 img {
@@ -47,9 +47,12 @@ textarea {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
 }
 
 .visually-hidden {
