@@ -59,6 +59,7 @@
             width="40"
             height="40"
             aria-label="Переключатель мобильного меню"
+            class="menu-icons"
           >
             <use class="icon-menu" href="./images/sprite.svg#menu_nav"></use>
             <use class="icon-cross" href="./images/sprite.svg#close_nav"></use>
@@ -183,8 +184,8 @@
               <img
                 src="./images/John.jpg"
                 alt="Фото Джона"
-                width="270"
-                height="260"
+                width="450"
+                height="320"
               />
 
               <h3 class="title">John Smith</h3>
@@ -225,8 +226,8 @@
               <img
                 src="./images/Marta Stewart.jpg"
                 alt="Фото Марты"
-                width="270"
-                height="260"
+                width="450"
+                height="320"
               />
 
               <h3 class="title">Marta Stewart</h3>
@@ -267,8 +268,8 @@
               <img
                 src="./images/Robert Jakis.jpg"
                 alt="Фото Роберта"
-                width="270"
-                height="260"
+                width="450"
+                height="320"
               />
 
               <h3 class="title">Robert Jakis</h3>
@@ -309,8 +310,8 @@
               <img
                 src="./images/Martin Doe.jpg"
                 alt="Фото Мартина"
-                width="270"
-                height="260"
+                width="450"
+                height="320"
               />
 
               <h3 class="title">Martin Doe</h3>
@@ -353,7 +354,7 @@
 
       <section class="section">
         <div class="container">
-          <h2 class="section-title customer">Постоянные клиенты</h2>
+          <h2 class="section-title customer-title">Постоянные клиенты</h2>
 
           <ul class="customer-list">
             <li class="customer-item">
@@ -407,7 +408,7 @@
       <div class="container page-footer">
         <div class="address-container">
           <a href="#" class="footer-logo">
-            <svg class="icon" width="153" height="31">
+            <svg class="icon-footer" width="153" height="31">
               <use href="./images/sprite.svg#web-studio2"></use>
             </svg>
           </a>
@@ -461,6 +462,9 @@
         <form class="subscribe">
           <!-- <b class="subscribe-title">подпишитесь на рассылку</b> -->
           <div class="subscribe-field">
+            <label class="subscribe-title" for="mail"
+              >подпишитесь на рассылку</label
+            >
             <input
               class="subscribe-input"
               type="email"
@@ -469,9 +473,6 @@
               placeholder="E-mail"
               autocomplete="off"
             />
-            <label class="subscribe-title" for="mail"
-              >подпишитесь на рассылку</label
-            >
 
             <a href="#" class="footer-button">
               Подписаться

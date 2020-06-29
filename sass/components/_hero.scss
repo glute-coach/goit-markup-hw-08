@@ -1,29 +1,45 @@
 .hero {
   text-align: center;
-  max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.8),
-      rgba(47, 48, 58, 0.7)
-    ),
-    url(../images/heroBg.jpg);
+
+  // background-image: linear-gradient(
+  //     rgba(47, 48, 58, 0.8),
+  //     rgba(47, 48, 58, 0.7)
+  //   ),
+  //   url(../images/heroBg.jpg);
   background-color: rgba(47, 48, 58, 0.8);
   background-repeat: no-repeat;
+
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+    max-height: 400px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.7)
+      ),
+      url(../images/Header_bg_480.jpg);
+  }
 
   &-title {
     margin-top: 0;
     margin-bottom: 0;
-    padding-bottom: 46px;
-    padding-top: 200px;
+    // padding-bottom: 46px;
+    // padding-top: 200px;
 
     color: $primary-white-color;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    // font-size: 44px;
+    // line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @media screen and (min-width: 480px) {
+      font-size: 26px;
+      line-height: 1.62;
+      padding-top: 118px;
+      padding-bottom: 30px;
+    }
   }
 }
 
@@ -31,9 +47,11 @@
   display: inline-block;
   border-radius: 4px;
   padding: 10px 32px;
-  border: solid 1px $accent-color;
+  border: none;
   min-width: 200px;
   text-align: center;
+
+  margin-bottom: 118px;
 
   color: $primary-white-color;
   background-color: $accent-color;
