@@ -305,6 +305,18 @@ textarea {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -345,19 +357,23 @@ ul {
           align-items: center;
 }
 
-.navigation-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  min-height: 483px;
-  background-color: teal;
-  text-align: center;
-}
-
-.navigation-menu.is-open {
-  display: block;
+@media screen and (max-width: 767px) {
+  .navigation-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 60px 0;
+    width: 100%;
+    max-height: 483px;
+    background: #ffffff;
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
+    text-align: center;
+  }
+  .navigation-menu.is-open {
+    display: block;
+  }
 }
 
 .menu-button {
@@ -368,6 +384,12 @@ ul {
   padding: 0;
   border: none;
   background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
 }
 
 .menu-button .icon-cross {
@@ -386,18 +408,8 @@ ul {
   fill: #2196f3;
 }
 
-.main-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.item .nav-link {
+.item-nav .nav-link {
   position: relative;
-  height: 80px;
   color: #212121;
   font-weight: 500;
   font-size: 14px;
@@ -406,11 +418,23 @@ ul {
   text-decoration: none;
 }
 
+@media screen and (max-width: 767px) {
+  .item-nav:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .item-nav:last-child {
+    margin-bottom: 60px;
+  }
+}
+
 .nav-link.current::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -8px;
   display: block;
   width: 100%;
   height: 4px;
@@ -422,6 +446,10 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .site-nav .nav-link:hover,
@@ -460,15 +488,10 @@ ul {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
-}
-
-.contacts .item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .contacts .item-contacts:not(:last-child) {
+    margin-bottom: 16px;
+  }
 }
 
 .page-header.portfolio-header {
@@ -919,7 +942,7 @@ footer {
 }
 
 .subscribe-input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   padding-left: 16px;
   margin-bottom: 20px;
@@ -994,6 +1017,8 @@ footer {
 }
 
 .button-filter {
+  display: inline-block;
+  margin-right: 5px;
   -webkit-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
@@ -1008,6 +1033,10 @@ footer {
   text-align: center;
   letter-spacing: 0.03em;
   text-decoration: none;
+}
+
+.button-filter:nth-last-child(n + 3) {
+  margin-bottom: 15px;
 }
 
 .button-filter:hover, .button-filter:focus {
@@ -1036,16 +1065,13 @@ footer {
 }
 
 .filter {
-  text-align: center;
-  margin-bottom: 50px;
+  padding-bottom: 40px;
+  padding-top: 60px;
 }
 
 .prodject-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: block;
+  padding-bottom: 60px;
 }
 
 .prodject-list .prodject-title {
@@ -1098,17 +1124,11 @@ footer {
 }
 
 .prodject-list .item {
-  width: 370px;
-  margin-right: 30px;
+  width: 450px;
+}
+
+.prodject-list .item:not(:last-child) {
   margin-bottom: 30px;
-}
-
-.prodject-list .item:nth-child(3n) {
-  margin-right: 0;
-}
-
-.prodject-list .item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
 }
 
 .prodject-list .item:hover {
