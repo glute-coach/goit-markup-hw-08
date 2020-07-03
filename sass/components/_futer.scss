@@ -10,14 +10,36 @@ footer {
   // padding-top: 48px;
   // padding-bottom: 28px;
   padding: 60px 0;
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+    padding: 60px 76px;
+  }
+}
+
+.address-container {
+  @media screen and (min-width: 768px) {
+    display: inline-flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    margin-bottom: 60px;
+  }
 }
 
 .icon-footer {
   display: block;
   // margin-bottom: 10px;
   margin-bottom: 20px;
-  margin-right: auto;
-  margin-left: auto;
+
+  @media screen and (max-width: 767px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 30px;
+  }
 }
 
 .footer-link {
@@ -119,6 +141,14 @@ footer {
     align-items: center;
 
     margin: 60px 0;
+
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      top: 65px;
+      right: 89px;
+
+      margin: 5px 0;
+    }
   }
 }
 

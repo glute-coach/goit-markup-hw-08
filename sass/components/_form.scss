@@ -1,7 +1,5 @@
 .form {
-  width: 448px;
   padding: 40px;
-  box-sizing: content-box;
 
   &-title {
     margin-top: 0;
@@ -80,11 +78,16 @@
     flex-direction: row;
     margin-bottom: 30px;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
 
     color: $secondary-text-color;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.71;
+    }
   }
 
   &-input:focus + .form-label,

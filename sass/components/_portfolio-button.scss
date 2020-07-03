@@ -17,8 +17,10 @@
   letter-spacing: 0.03em;
   text-decoration: none;
 
-  &:nth-last-child(n + 3) {
-    margin-bottom: 15px;
+  @media screen and (max-width: 767px) {
+    &:nth-last-child(n + 3) {
+      margin-bottom: 15px;
+    }
   }
 
   &:hover,
@@ -52,4 +54,14 @@
   // text-align: center;
   padding-bottom: 40px;
   padding-top: 60px;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 94px;
+    padding-bottom: 50px;
+  }
 }

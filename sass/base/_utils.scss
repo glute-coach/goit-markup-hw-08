@@ -34,7 +34,7 @@ textarea {
   // padding-bottom: 60px;
 
   &-title {
-    color: $primary-text-color;
+    margin: 0;
 
     font-weight: bold;
     font-size: 28px;
@@ -42,6 +42,12 @@ textarea {
 
     text-align: center;
     letter-spacing: 0.03em;
+    color: $primary-text-color;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+      line-height: 1.17;
+    }
   }
 }
 

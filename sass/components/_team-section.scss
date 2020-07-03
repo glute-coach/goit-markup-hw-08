@@ -4,24 +4,82 @@
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 60px;
+  padding-top: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 
   & .section-title {
     margin-bottom: 30px;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
   }
 }
 
 .team-list {
-  // display: flex;
   text-align: center;
 
-  & .item:not(:last-child) {
-    margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
+
+  @media screen and (max-width: 767px) {
+    & .item:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
   & .item {
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 1px 3px rgba(0, 0, 0, 0.12);
     background-color: $primary-white-color;
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    width: 450px;
+
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+      height: 422px;
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    & .item:nth-child(2n) {
+      @media screen and (min-width: 768px) {
+        margin-right: 0;
+      }
+    }
+
+    & .item:nth-last-child(-n + 2) {
+      @media screen and (min-width: 768px) {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & .item {
+      margin-bottom: 0;
+      margin-right: 0;
+    }
+
+    & .item:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   & .title {
@@ -48,7 +106,17 @@
 }
 
 .item .team-img {
+  width: 450px;
   height: 320px;
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    height: 260px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
 }
 
 .social-list {

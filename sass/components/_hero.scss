@@ -30,6 +30,13 @@
       padding-top: 118px;
       padding-bottom: 30px;
     }
+
+    @media screen and (min-width: 1200px) {
+      padding-bottom: 46px;
+      padding-top: 200px;
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
 }
 
