@@ -45,7 +45,7 @@
     margin-right: 30px;
     margin-bottom: 30px;
 
-    width: 450px;
+    max-width: 450px;
 
     @media screen and (min-width: 768px) {
       width: 354px;
@@ -106,8 +106,8 @@
 }
 
 .item .team-img {
-  width: 450px;
-  height: 320px;
+  max-width: 450px;
+  max-height: 320px;
 
   @media screen and (min-width: 768px) {
     width: 354px;
@@ -139,8 +139,8 @@
 }
 
 .social-link {
-  width: 20px;
-  height: 20px;
+  max-width: 20px;
+  max-height: 20px;
 }
 
 .social-item {

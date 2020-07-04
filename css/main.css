@@ -353,12 +353,20 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  min-height: 60px;
+  height: 60px;
 }
 
 @media screen and (min-width: 768px) {
   .page-header {
-    min-height: 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -440,6 +448,13 @@ ul {
             align-items: center;
     margin-left: 81px;
     padding-right: 55px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-nav {
+    padding-right: 305px;
+    margin-left: 0;
   }
 }
 
@@ -573,9 +588,31 @@ ul {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .item-contacts:not(:last-child) {
     margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .item-contacts:not(:last-child) {
+    margin-right: 30px;
   }
 }
 
@@ -589,8 +626,8 @@ ul {
   margin-right: auto;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.7))), url(../images/heroBg-mob.jpg);
   background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.7)), url(../images/heroBg-mob.jpg);
-  background-color: rgba(47, 48, 58, 0.8);
-  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -699,14 +736,14 @@ ul {
   .feature-list .feature-item {
     margin-right: 30px;
     margin-bottom: 30px;
-    width: 354px;
-    height: 251px;
+    max-width: 354px;
+    max-height: 251px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .feature-list .feature-item {
-    width: 270px;
+    max-width: 270px;
   }
 }
 
@@ -774,8 +811,8 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 450px;
-  height: 120px;
+  max-width: 450px;
+  max-height: 120px;
   border-radius: 4px;
   background-color: #f5f4fa;
 }
@@ -911,7 +948,7 @@ ul {
   background-color: #ffffff;
   margin-right: 30px;
   margin-bottom: 30px;
-  width: 450px;
+  max-width: 450px;
 }
 
 @media screen and (min-width: 768px) {
@@ -970,8 +1007,8 @@ ul {
 }
 
 .item .team-img {
-  width: 450px;
-  height: 320px;
+  max-width: 450px;
+  max-height: 320px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1018,8 +1055,8 @@ ul {
 }
 
 .social-link {
-  width: 20px;
-  height: 20px;
+  max-width: 20px;
+  max-height: 20px;
 }
 
 .social-item:hover {
@@ -1081,8 +1118,8 @@ ul {
           justify-content: center;
   margin-right: 30px;
   margin-bottom: 30px;
-  width: 209px;
-  height: 90px;
+  max-width: 209px;
+  max-height: 90px;
   color: inherit;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -1109,7 +1146,7 @@ ul {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199px) and (min-width: 768px) {
   .customer-item:nth-child(3n) {
     margin-right: 0;
   }
@@ -1160,6 +1197,21 @@ footer {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .page-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 48px 0 28px 0;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .address-container {
     display: -webkit-inline-box;
@@ -1173,6 +1225,12 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address-container {
+    margin-bottom: 0;
   }
 }
 
@@ -1194,8 +1252,25 @@ footer {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .icon-footer {
+    margin-left: 0;
+  }
+}
+
 .footer-link {
   display: block;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .footer-link.mail-link {
@@ -1310,6 +1385,23 @@ footer {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .socials-container {
+    position: absolute;
+    top: 20%;
+    left: -25%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+}
+
 .subscribe-title {
   margin-bottom: 20px;
   font-weight: bold;
@@ -1321,8 +1413,17 @@ footer {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .subscribe-title {
+    position: absolute;
+    top: -33px;
+    left: 0;
+    margin-bottom: 0;
+  }
+}
+
 .subscribe-input {
-  width: 450px;
+  max-width: 450px;
   height: 50px;
   padding-left: 16px;
   margin-bottom: 20px;
@@ -1331,6 +1432,14 @@ footer {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background-color: #2f303a;
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-input {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 }
 
 .subscribe-input:focus {
@@ -1353,28 +1462,42 @@ footer {
           justify-content: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .subscribe-field {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 20px;
+  }
+}
+
 .footer-button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 10px;
-  width: 200px;
+  padding: 10px 28px;
   height: 50px;
+  min-width: 200px;
   font-weight: 900;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
   border-radius: 4px;
-  border: solid 1px #2196f3;
-  min-width: 200px;
   text-align: center;
   text-decoration: none;
   color: #ffffff;
   background-color: #2196f3;
   font-family: inherit;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-button {
+    margin-right: 15px;
+  }
 }
 
 .icon-send {
@@ -1394,6 +1517,12 @@ footer {
   line-height: 2;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1200px) {
+  .copy {
+    display: block;
+  }
 }
 
 .button-filter {
@@ -1427,23 +1556,23 @@ footer {
 }
 
 .button-oll {
-  width: 73px;
+  max-width: 73px;
 }
 
 .button-site {
-  width: 128px;
+  max-width: 128px;
 }
 
 .button-app {
-  width: 145px;
+  max-width: 145px;
 }
 
 .button-design {
-  width: 103px;
+  max-width: 103px;
 }
 
 .button-marketing {
-  width: 130px;
+  max-width: 130px;
 }
 
 .filter {
@@ -1517,7 +1646,7 @@ footer {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 450px;
+  max-width: 450px;
   height: 294px;
   margin-top: 0;
   margin-bottom: 0;
@@ -1550,7 +1679,7 @@ footer {
 }
 
 .prodject-list .item {
-  width: 450px;
+  max-width: 450px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1605,8 +1734,8 @@ footer {
 }
 
 .card-image {
-  width: 450px;
-  height: 294px;
+  max-width: 450px;
+  max-height: 294px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1662,10 +1791,10 @@ footer {
   border-radius: 4px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199px) {
   .modal {
-    min-width: 450px;
-    min-height: 609px;
+    max-width: 450px;
+    max-height: 609px;
   }
 }
 

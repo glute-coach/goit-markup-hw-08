@@ -56,6 +56,10 @@ textarea {
   margin-right: auto;
   padding: 0 15px;
 
+  // @media screen and (max-width: 479px) {
+  //   max-width: 479px;
+  // }
+
   @media screen and (min-width: 480px) {
     width: 480px;
   }
