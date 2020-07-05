@@ -309,19 +309,19 @@ textarea {
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 480px;
+    max-width: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -377,6 +377,8 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 153px;
+  max-height: 31px;
 }
 
 @media screen and (max-width: 767px) {
@@ -732,6 +734,12 @@ ul {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .feature-list .feature-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .feature-list .feature-item {
     margin-right: 30px;
@@ -812,7 +820,7 @@ ul {
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 450px;
-  max-height: 120px;
+  height: 120px;
   border-radius: 4px;
   background-color: #f5f4fa;
 }
@@ -1118,7 +1126,7 @@ ul {
           justify-content: center;
   margin-right: 30px;
   margin-bottom: 30px;
-  max-width: 209px;
+  width: 209px;
   height: 90px;
   color: inherit;
   border: 1px solid #afb1b8;
